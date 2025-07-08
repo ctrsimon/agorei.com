@@ -8,133 +8,76 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/main.js"></script>
   <script defer src="assets/confetti.browser.min.js"></script>
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <main>
     <!-- Animated "Open-Me" Card -->
-    <section id="card" class="hero" aria-label="Birthday Card">
-      <button id="envelopeBtn" class="envelope" aria-label="Open birthday card" tabindex="0">
-        <span class="flap" aria-hidden="true"></span>
-        <span class="body" aria-hidden="true"></span>
+    <section id="card" class="hero" aria-label="Birthday Present">
+      <button id="presentBtn" class="present" aria-label="Open present" tabindex="0">
+        <span class="lid"></span>
+        <span class="box"></span>
+        <span class="bow">
+          <span class="bow-loop"></span>
+          <span class="bow-loop"></span>
+          <span class="bow-knot"></span>
+        </span>
+        <span class="flower-reveal"></span>
+        <span class="ribbon-x"></span>
+        <span class="ribbon-y"></span>
         <span class="open-text">Open Me</span>
       </button>
-      <div class="letter" aria-live="polite" hidden>
+      <div class="letter" hidden>
         <h1>Happy Birthday Amelia Baker!</h1>
-        <p> So glad you are not 18 anymore. You know what this means.</p>
+        <p>So glad you are not 18 anymore. You know what this means.</p>
       </div>
     </section>
 
-    <!-- Picture Gallery -->
-    <section id="timeline" class="timeline" aria-label="The Many Titles of Amelia Baker">
-      <h2>I wish you took more pictures with me :(</h2>
-      <ul class="events">
-        <li class="event" tabindex="0" aria-label="Train Lover">
-          <img src="assets/img/IMG_8961.jpg" alt="Road trip photo" class="avatar" loading="lazy" />
-          <span class="caption">Train Lover</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Bobby">
-          <img src="assets/img/IMG_8962.jpg" alt="Bobby" class="avatar" loading="lazy" />
-          <span class="caption">Bobby</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="House Tour">
-          <img src="assets/img/IMG_8964.jpg" alt="House Tour" class="avatar" loading="lazy" />
-          <span class="caption">House Tour</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Virtuous Woman">
-          <img src="assets/img/IMG_8976.jpg" alt="Virtuous Woman" class="avatar" loading="lazy" />
-          <span class="caption">Virtuous Woman</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Soaker">
-          <img src="assets/img/IMG_8974.jpg" alt="Soaker" class="avatar" loading="lazy" />
-          <span class="caption">Soaker</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Egg Eater">
-          <img src="assets/img/IMG_8971.jpg" alt="Egg Eater" class="avatar" loading="lazy" />
-          <span class="caption">Egg Eater</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Egg Thrower">
-          <img src="assets/img/IMG_8969.jpg" alt="Egg Thrower" class="avatar" loading="lazy" />
-          <span class="caption">Egg Thrower</span>
-        </li>
-        <li class="event" tabindex="0" aria-label="Motto">
-          <img src="assets/img/IMG_8966.jpg" alt="Motto" class="avatar" loading="lazy" />
-          <span class="caption">Motto</span>
-        </li>
-      </ul>
+    <!-- Picture Gallery (Image Slider) -->
+    <section id="gallery" class="gallery" aria-label="Photo Gallery">
+      <button class="arrow left" aria-label="Previous photo">‹</button>
+      <div class="frame-container">
+        <img id="frame" src="" alt="Gallery image" decoding="async">
+      </div>
+      <button class="arrow right" aria-label="Next photo">›</button>
     </section>
 
-    <!-- Memory Mosaic Reveal -->
-    <section id="mosaic" class="mosaic" aria-label="Memory Mosaic">
-      <h2>Memory Mosaic</h2>
-      <div class="mosaic-grid" aria-label="Mosaic grid">
-        <!-- 24 tiles, 4x6 grid -->
-        <!-- Placeholder images, replace with actual slices in assets/img/mosaic/ -->
-        <!-- Row 1 -->
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/1.png" alt="Mosaic tile 1" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/2.png" alt="Mosaic tile 2" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/3.png" alt="Mosaic tile 3" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/4.png" alt="Mosaic tile 4" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/5.png" alt="Mosaic tile 5" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/6.png" alt="Mosaic tile 6" loading="lazy"></div>
-        <!-- Row 2 -->
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/7.png" alt="Mosaic tile 7" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/8.png" alt="Mosaic tile 8" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/9.png" alt="Mosaic tile 9" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/10.png" alt="Mosaic tile 10" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/11.png" alt="Mosaic tile 11" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/12.png" alt="Mosaic tile 12" loading="lazy"></div>
-        <!-- Row 3 -->
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/13.png" alt="Mosaic tile 13" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/14.png" alt="Mosaic tile 14" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/15.png" alt="Mosaic tile 15" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/16.png" alt="Mosaic tile 16" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/17.png" alt="Mosaic tile 17" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/18.png" alt="Mosaic tile 18" loading="lazy"></div>
-        <!-- Row 4 -->
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/19.png" alt="Mosaic tile 19" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/20.png" alt="Mosaic tile 20" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/21.png" alt="Mosaic tile 21" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/22.png" alt="Mosaic tile 22" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/23.png" alt="Mosaic tile 23" loading="lazy"></div>
-        <div class="tile" data-flipped="false" tabindex="0"><img src="assets/img/mosaic/24.png" alt="Mosaic tile 24" loading="lazy"></div>
-      </div>
-      <div class="mosaic-overlay" id="mosaicOverlay" aria-hidden="true" hidden>
-        <span>HAPPY B-DAY AMELIA!</span>
-      </div>
-    </section>
-
-    <!-- Inside-Joke Scavenger Hunt -->
+    <!-- Texts from Amelia (Scavenger) -->
     <section id="scavenger" class="scavenger" aria-label="Inside-Joke Scavenger Hunt">
-      <h2>Inside-Joke Scavenger Hunt</h2>
-      <div class="hunt-icons">
-        <svg class="hunt-item" data-step="1" tabindex="0" aria-label="Taco icon" role="img" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#FF6B6B"/><text x="24" y="32" text-anchor="middle" font-size="24" fill="#fff">🌮</text></svg>
-        <svg class="hunt-item" data-step="2" tabindex="0" aria-label="Running shoe icon" role="img" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#4ECDC4"/><text x="24" y="32" text-anchor="middle" font-size="24" fill="#fff">👟</text></svg>
-        <svg class="hunt-item" data-step="3" tabindex="0" aria-label="Book icon" role="img" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#FF6B6B"/><text x="24" y="32" text-anchor="middle" font-size="24" fill="#fff">📚</text></svg>
-        <svg class="hunt-item" data-step="4" tabindex="0" aria-label="Sunrise icon" role="img" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#4ECDC4"/><text x="24" y="32" text-anchor="middle" font-size="24" fill="#fff">🌅</text></svg>
-        <svg class="hunt-item" data-step="5" tabindex="0" aria-label="Graduation cap icon" role="img" width="48" height="48" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#FF6B6B"/><text x="24" y="32" text-anchor="middle" font-size="24" fill="#fff">🎓</text></svg>
-      </div>
-      <!-- Dialogs for each clue -->
-      <dialog id="clue1" aria-label="Clue 1"><p>Remember the taco night disaster? Some things are better left unsaid… 🌮</p><button class="next-clue" data-next="2">Next clue</button></dialog>
-      <dialog id="clue2" aria-label="Clue 2"><p>Who knew running a marathon would end with us crawling to brunch? 👟</p><button class="next-clue" data-next="3">Next clue</button></dialog>
-      <dialog id="clue3" aria-label="Clue 3"><p>Book club or wine club? The debate rages on. 📚</p><button class="next-clue" data-next="4">Next clue</button></dialog>
-      <dialog id="clue4" aria-label="Clue 4"><p>Sunrise at the beach: 10/10, would wake up at 4am again. 🌅</p><button class="next-clue" data-next="5">Next clue</button></dialog>
-      <dialog id="clue5" aria-label="Clue 5"><p>Graduation cap toss: nailed it (after 3 tries). 🎓</p><button class="next-clue" data-next="final">Final Surprise</button></dialog>
-      <div id="coupons" hidden>
-        <h3>Birthday Coupons</h3>
-        <ul>
-          <li>IOU taco night 🌮</li>
-          <li>One sunrise coffee run ☕</li>
-          <li>Book club pick is yours 📚</li>
-          <li>Beach day chauffeur 🏖️</li>
-          <li>Marathon cheer squad 👟</li>
-        </ul>
-      </div>
+      <h2>Texts from Amelia</h2>
+      <ul class="texts">
+        <li><p>"Remember when the train was late and we tried to hitch-hike with a goat?"</p></li>
+        <li><p>"I can't believe you still call me Bobby 😂"</p></li>
+        <li><p>"Eggs are for eating, not throwing—prove me wrong."</p></li>
+        <li><p>"House-tour 2.0 when?"</p></li>
+        <li><p>"One day you'll like sunrise runs, I swear."</p></li>
+      </ul>
     </section>
   </main>
   <footer>
     &copy; 2025 Agorei. All rights reserved. <span>Simon C., Founder</span>
   </footer>
+  <style>
+    body {
+      background-color: #000; /* Black background behind the image */
+      background-image: url("../assets/img/photos/IMG_8966.jpg");
+      background-size: 70vw auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .present .ribbon-x {
+      z-index: 2;
+    }
+    .present .ribbon-y {
+      z-index: 1;
+    }
+    .present .open-text {
+      z-index: 10;
+    }
+    .present .flower-reveal {
+      background: url('assets/img/photos/flower.png') center/contain no-repeat;
+    }
+  </style>
 </body>
 </html>
