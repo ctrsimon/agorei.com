@@ -373,18 +373,27 @@ footer {
 }
 
 .gallery {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   margin: 2rem 0;
+  flex-wrap: nowrap;
 }
+
 .frame-container {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
+  min-width: 0;
   overflow-x: auto;
-  margin: 2rem 0;
+  margin: 0;
 }
+
 #frame {
-  display: inline-block;
+  display: block;
   width: auto;
   height: auto;
   max-width: 95vw;
@@ -393,6 +402,7 @@ footer {
   border-radius: 18px;
   box-shadow: 0 8px 32px #0005;
 }
+
 .arrow {
   background: #ffffff33;
   border: none;
@@ -426,4 +436,41 @@ footer {
     max-width: 98vw;
     max-height: 40vh;
   }
+}
+
+.birthday-gold {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-shadow: 0 2px 8px #b8860b55, 0 1px 0 #fff8;
+  margin: 2.5rem 0 1.5rem 0;
+  letter-spacing: 0.04em;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.present.marshes .flower-reveal {
+  background: url('../assets/img/photos/marshes.png') center/cover no-repeat;
+}
+
+.presents-intro {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fffbe6;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.gallery-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fffbe6;
+  margin-bottom: 1.2rem;
+  margin-top: 2.2rem;
+  letter-spacing: 0.01em;
+  font-family: 'Poppins', Arial, sans-serif;
 }
