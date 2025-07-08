@@ -1,10 +1,10 @@
 const pics = [
-  "IMG_8955.jpg","IMG_8956.jpg","IMG_8957.jpg","IMG_8958.jpg",
+  "IMG_8956.jpg","IMG_8957.jpg","IMG_8958.jpg",
   "IMG_8959.jpg","IMG_8960.jpg","IMG_8961.jpg","IMG_8962.jpg",
   "IMG_8963.jpg","IMG_8964.jpg","IMG_8965.jpg","IMG_8966.jpg",
   "IMG_8967.jpg","IMG_8968.jpg","IMG_8969.jpg","IMG_8970.jpg",
   "IMG_8971.jpg","IMG_8972.jpg","IMG_8973.jpg","IMG_8974.jpg",
-  "IMG_8975.jpg","IMG_8976.jpg"
+  "IMG_8975.jpg","IMG_8976.jpg","IMG_8955.jpg"
 ];
 let idx = 0;
 
