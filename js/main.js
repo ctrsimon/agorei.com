@@ -16,6 +16,7 @@ function show(n) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setupPresent();
   show(0);
   document.querySelector(".arrow.left").onclick  = () => show(idx-1);
   document.querySelector(".arrow.right").onclick = () => show(idx+1);
